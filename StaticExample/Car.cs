@@ -13,7 +13,7 @@
 
         public Car(string manufacturer, string model, CarColor carColor)
         {
-            Manufacturer = "Mercedes";
+            Manufacturer = manufacturer;
             Model = model;
             CarColor = carColor;
 
