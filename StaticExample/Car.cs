@@ -2,21 +2,21 @@
 {
     public class Car
     {
-        public string Manufacturer { get; set; } 
+        public string Manufacturer { get; set; }
 
         public string Model { get; set; }
 
         public CarColor CarColor { get; set; }
 
-
+        // A static variable describes the class rather than an instance.
         private static int carsProduced;
 
         public Car(string manufacturer, string model, CarColor carColor)
         {
-            Manufacturer = "Mercedes"; 
+            Manufacturer = "Mercedes";
             Model = model;
             CarColor = carColor;
-            
+
             carsProduced++;
         }
 
@@ -30,7 +30,8 @@
             string result = $"Car Details: \nManufacturer: {Manufacturer}\nModel:{Model}\nColor: {CarColor}";
             return result;
         }
-
+        
+        // A static method can only call other static methods and variables.
         public static int GetCarsProduced()
         {
             return carsProduced;
